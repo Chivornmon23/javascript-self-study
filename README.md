@@ -6,8 +6,8 @@ The goal is to rebuild my JavaScript fundamentals through hands-on practice, sma
 
 ## Progress
 
-- [ ] #27 Rest Parameters
-- [ ] #28 Dice Roller
+- [x] #27 Rest Parameters
+- [x] #28 Dice Roller
 - [ ] #29 Random Password Generator
 - [ ] #30 Callbacks
 - [ ] #31 forEach()
