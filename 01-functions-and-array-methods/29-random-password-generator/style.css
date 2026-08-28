@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  --ink: #142321;
+  --muted: #687571;
+  --paper: #f5f7f2;
+  --panel: #ffffff;
+  --mint: #b9f5d0;
+  --orange: #ff704d;
+  --line: #dce5de;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Space Grotesk", sans-serif;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image: radial-gradient(#b6c8bb 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: linear-gradient(to bottom, black, transparent 75%);
+}
+.app-shell {
+  position: relative;
+  max-width: 1160px;
+  min-height: 100vh;
+  margin: auto;
+  padding: 30px 6vw 24px;
+  display: flex;
+  flex-direction: column;
+}
+.topbar,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: -0.5px;
+}
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  background: var(--ink);
+  color: var(--mint);
+  font-family: "DM Mono", monospace;
+  font-size: 16px;
+}
+.status,
+.footer {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+.status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #42bc70;
+  margin-right: 7px;
+}
+.generator {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: clamp(40px, 8vw, 115px);
+  align-items: center;
+  flex: 1;
+  padding: 70px 0;
+}
+.eyebrow,
+.output-label,
+.section-heading,
+.section-number {
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-size: 11px;
+  font-weight: 700;
+}
+h1 {
+  max-width: 470px;
+  margin: 18px 0;
+  font-size: clamp(48px, 6.5vw, 82px);
+  line-height: 0.93;
+  letter-spacing: -4px;
+}
+h1 em {
+  color: #4c7167;
+  font-style: normal;
+}
+.lede {
+  color: var(--muted);
+  max-width: 330px;
+  line-height: 1.65;
+  font-size: 15px;
+}
+.generator-panel {
+  background: var(--panel);
+  box-shadow: 10px 10px 0 #dce8df;
+  border: 1px solid var(--line);
+  padding: clamp(22px, 4vw, 38px);
+}
+.password-output {
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--line);
+}
+.output-label {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.password {
+  display: block;
+  color: var(--ink);
+  font:
+    500 clamp(18px, 2.5vw, 26px) "DM Mono",
+    monospace;
+  word-break: break-all;
+  letter-spacing: -1px;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+.icon-button {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+}
+.icon-button:hover {
+  background: var(--mint);
+  border-color: var(--ink);
+}
+.copy-icon,
+.copy-icon::after {
+  width: 14px;
+  height: 16px;
+  border: 1.5px solid currentColor;
+  display: block;
+}
+.copy-icon {
+  position: relative;
+}
+.copy-icon::after {
+  content: "";
+  position: absolute;
+  background: var(--paper);
+  left: 4px;
+  top: -5px;
+}
+.strength-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0 30px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.strength-bars {
+  display: flex;
+  gap: 4px;
+}
+.strength-bars i {
+  width: 24px;
+  height: 5px;
+  background: #e1e8e3;
+}
+.strength-bars i.active {
+  background: #52b477;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 13px;
+}
+.section-number {
+  color: var(--orange);
+}
+.length-control {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.length-control output {
+  font:
+    500 14px "DM Mono",
+    monospace;
+  color: var(--orange);
+}
+input[type="range"] {
+  accent-color: var(--orange);
+  width: 100%;
+  height: 4px;
+}
+.character-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 27px 0 30px;
+}
+.check-option {
+  display: grid;
+  grid-template-columns: 18px 1fr auto;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  font-size: 12px;
+  cursor: pointer;
+}
+.check-option:has(input:checked) {
+  background: #f0fbf3;
+  border-color: #9dd7ae;
+}
+.check-option input {
+  position: absolute;
+  opacity: 0;
+}
+.checkmark {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #a8b7ae;
+  position: relative;
+}
+.check-option input:checked + .checkmark {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+.check-option input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 3px;
+  border-left: 1.5px solid var(--mint);
+  border-bottom: 1.5px solid var(--mint);
+  transform: rotate(-45deg);
+  left: 4px;
+  top: 4px;
+}
+.check-option small {
+  color: var(--muted);
+  font:
+    10px "DM Mono",
+    monospace;
+}
+.generate-button {
+  width: 100%;
+  border: 0;
+  background: var(--ink);
+  color: white;
+  min-height: 54px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+}
+.generate-button span {
+  color: var(--mint);
+  font-size: 24px;
+  transition: transform 0.2s;
+}
+.generate-button:hover span {
+  transform: translateX(5px);
+}
+.copy-status {
+  min-height: 16px;
+  margin: 12px 0 -2px;
+  text-align: center;
+  color: #3b9b5c;
+  font-size: 11px;
+}
+.footer {
+  margin-top: auto;
+  gap: 15px;
+}
+.footer-rule {
+  height: 1px;
+  background: var(--line);
+  flex: 1;
+}
+@media (max-width: 700px) {
+  .app-shell {
+    padding: 22px 20px;
+  }
+  .generator {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 55px 0 45px;
+  }
+  .intro {
+    padding-right: 20px;
+  }
+  h1 {
+    font-size: 56px;
+  }
+  .footer {
+    font-size: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .character-grid {
+    grid-template-columns: 1fr;
+  }
+  .status {
+    font-size: 10px;
+  }
+}

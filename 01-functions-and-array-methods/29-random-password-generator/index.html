@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keysmith | Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main class="app-shell">
+        <header class="topbar">
+            <a class="brand" href="#" aria-label="Keysmith home">
+                <span class="brand-mark">K</span>
+                <span>keysmith</span>
+            </a>
+            <span class="status"><span class="status-dot"></span>Local &amp; private</span>
+        </header>
+
+        <section class="generator" aria-labelledby="page-title">
+            <div class="intro">
+                <p class="eyebrow">Password utility / 01</p>
+                <h1 id="page-title">Make a key<br><em>worth keeping.</em></h1>
+                <p class="lede">Create a strong, one-of-a-kind password in seconds. Nothing leaves this browser.</p>
+            </div>
+
+            <div class="generator-panel">
+                <div class="password-output">
+                    <div>
+                        <span class="output-label">Your new password</span>
+                        <output id="password-output" class="password" aria-live="polite">Loading...</output>
+                    </div>
+                    <button id="copy-button" class="icon-button" type="button" aria-label="Copy password"
+                        title="Copy password">
+                        <span class="copy-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="strength-row">
+                    <span id="strength-label">Excellent</span>
+                    <div class="strength-bars" aria-label="Password strength"><i></i><i></i><i></i><i></i></div>
+                </div>
+
+                <div class="options">
+                    <div class="section-heading"><span>Customize</span><span class="section-number">02</span></div>
+                    <label class="length-control" for="length">
+                        <span>Password length</span>
+                        <output id="length-value">12</output>
+                    </label>
+                    <input id="length" type="range" min="4" max="32" value="12">
+
+                    <div class="character-grid">
+                        <label class="check-option"><input id="lowercase" type="checkbox" checked><span
+                                class="checkmark"></span><span>Lowercase</span><small>a-z</small></label>
+                        <label class="check-option"><input id="uppercase" type="checkbox" checked><span
+                                class="checkmark"></span><span>Uppercase</span><small>A-Z</small></label>
+                        <label class="check-option"><input id="numbers" type="checkbox" checked><span
+                                class="checkmark"></span><span>Numbers</span><small>0-9</small></label>
+                        <label class="check-option"><input id="symbols" type="checkbox" checked><span
+                                class="checkmark"></span><span>Symbols</span><small>#!@</small></label>
+                    </div>
+                </div>
+
+                <button id="generate-button" class="generate-button" type="button">Generate password <span
+                        aria-hidden="true">&#8594;</span></button>
+                <p id="copy-status" class="copy-status" role="status"></p>
+            </div>
+        </section>
+
+        <footer class="footer"><span>Built for better account security</span><span
+                class="footer-rule"></span><span>KEY-29</span></footer>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
