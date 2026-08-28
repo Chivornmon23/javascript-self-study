@@ -8,8 +8,8 @@ The goal is to rebuild my JavaScript fundamentals through hands-on practice, sma
 
 - [x] #27 Rest Parameters
 - [x] #28 Dice Roller
-- [ ] #29 Random Password Generator
-- [ ] #30 Callbacks
+- [x] #29 Random Password Generator
+- [x] #30 Callbacks
 - [ ] #31 forEach()
 - [ ] #32 map()
 - [ ] #33 filter()
