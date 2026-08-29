@@ -10,12 +10,12 @@ The goal is to rebuild my JavaScript fundamentals through hands-on practice, sma
 - [x] #28 Dice Roller
 - [x] #29 Random Password Generator
 - [x] #30 Callbacks
-- [ ] #31 forEach()
-- [ ] #32 map()
-- [ ] #33 filter()
-- [ ] #34 reduce()
-- [ ] #35 Function Expressions
-- [ ] #36 Arrow Functions
+- [x] #31 forEach()
+- [x] #32 map()
+- [x] #33 filter()
+- [x] #34 reduce()
+- [x] #35 Function Expressions
+- [x] #36 Arrow Functions
 - [ ] #37 JavaScript Objects
 - [ ] #38 this
 - [ ] #39 Constructors
