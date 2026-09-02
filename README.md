@@ -16,10 +16,10 @@ The goal is to rebuild my JavaScript fundamentals through hands-on practice, sma
 - [x] #34 reduce()
 - [x] #35 Function Expressions
 - [x] #36 Arrow Functions
-- [ ] #37 JavaScript Objects
-- [ ] #38 this
-- [ ] #39 Constructors
-- [ ] #40 Classes
+- [x] #37 JavaScript Objects
+- [x] #38 this
+- [x] #39 Constructors
+- [x] #40 Classes
 - [ ] #41 static
 - [ ] #42 Inheritance
 - [ ] #43 super
