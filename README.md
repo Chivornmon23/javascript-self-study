@@ -20,10 +20,10 @@ The goal is to rebuild my JavaScript fundamentals through hands-on practice, sma
 - [x] #38 this
 - [x] #39 Constructors
 - [x] #40 Classes
-- [ ] #41 static
-- [ ] #42 Inheritance
-- [ ] #43 super
-- [ ] #44 Getters & Setters
+- [x] #41 static
+- [x] #42 Inheritance
+- [x] #43 super
+- [x] #44 Getters & Setters
 - [ ] #45 Destructuring
 - [ ] #46 Nested Objects
 - [ ] #47 Arrays of Objects
