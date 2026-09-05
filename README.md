@@ -24,7 +24,7 @@ The goal is to rebuild my JavaScript fundamentals through hands-on practice, sma
 - [x] #42 Inheritance
 - [x] #43 super
 - [x] #44 Getters & Setters
-- [ ] #45 Destructuring
+- [x] #45 Destructuring
 - [ ] #46 Nested Objects
 - [ ] #47 Arrays of Objects
 - [ ] #48 Sorting
